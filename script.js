@@ -1,5 +1,8 @@
-  
 // rock paper scissors played against the computer
+
+let answer;
+let results;
+
 
 function computerPlay () {
       // randomly return rock, paper, or scissors;
@@ -15,12 +18,14 @@ function computerPlay () {
                           answer= ("paper");
                   break;
           }
-          console.log(x);
               return answer;
   }
   
-  function singleRound (playerSelection, compMove) {
-      // return String to declare winner
+function singleRound () {// return String to declare winner
+    let Question = prompt("rock,paper,scissors"); //grabs user input
+    let playerSelection = Question.toLowerCase(); //makes user input case insensitive
+    let compMove = computerPlay();
+      //needs to call compMove and playerSelection so each game pulls new data.
       if ((playerSelection == "rock") && (compMove == "rock") || 
         (playerSelection =="scissors") && (compMove =="scissors") || 
         (playerSelection =="paper") && (compMove =="paper")) {
@@ -40,12 +45,7 @@ function computerPlay () {
         } else {
             results = "typo?"
         }
-          console.log(results);
+          return results;
   }
-      //arguments need to be case insensitive
-  let answer;
-  let results;
-  let Question = prompt("rock,paper,scissors"); //make prompt?
-  let playerSelection = Question.toLowerCase();
-  let compMove = computerPlay();
-  console.log(singleRound(playerSelection, compMove));
+  
+ 
