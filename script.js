@@ -6,9 +6,6 @@ let playerScore = 0;
 let compScore = 0;
 let gameOver;
 
-//test
-
-
 function computerPlay () {
       // randomly return rock, paper, or scissors;
       let x = Math.floor(Math.random() * 3)
@@ -62,9 +59,14 @@ function singleRound () {// return String to declare winner
 function game() {
       while ((playerScore <5) && (compScore < 5)) {
             singleRound(); 
+            console.log(results);
+      }
+            if (playerScore == 5) {
+                  gameOver = "congratulations, You win!!";
+            } else {
+                  gameOver = "Too bad. You lose";
             }
-      return (`player score is ${playerScore} and computer score is ${compScore}`);
-      
+      return (`${gameOver}, player score is ${playerScore} and computer score is ${compScore}`);
 }
       
       //play singleRound 5 times while tallying score from player and computer
