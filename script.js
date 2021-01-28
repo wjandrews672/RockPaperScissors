@@ -4,6 +4,9 @@ let answer;
 let results;
 let playerScore = 0;
 let compScore = 0;
+let gameOver;
+
+//test
 
 
 function computerPlay () {
@@ -57,11 +60,17 @@ function singleRound () {// return String to declare winner
   }
 
 function game() {
-      singleRound()
+      while ((playerScore <5) && (compScore < 5)) {
+            singleRound(); 
+            }
+      return (`player score is ${playerScore} and computer score is ${compScore}`);
+      
+}
+      
       //play singleRound 5 times while tallying score from player and computer
       // playerscore ++  and compscore++ in computerPlay else if 
       //play loop until one score = 5 and then declare winner and exit loop
 
-}
+
   
  
