@@ -4,6 +4,7 @@ let answer;
 let results;
 let playerScore = 0;
 let compScore = 0;
+let gameOver;
 
 
 function computerPlay () {
