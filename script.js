@@ -2,6 +2,8 @@
 
 let answer;
 let results;
+let playerScore = 0;
+let compScore = 0;
 
 
 function computerPlay () {
@@ -29,23 +31,37 @@ function singleRound () {// return String to declare winner
       if ((playerSelection == "rock") && (compMove == "rock") || 
         (playerSelection =="scissors") && (compMove =="scissors") || 
         (playerSelection =="paper") && (compMove =="paper")) {
-              results = ("tie");
+            results = ("tie");
         } else if ((playerSelection == "rock") && (compMove =="paper")) {
-              results = ("you lose. paper beats rock");
+            compScore++;
+            results = ("you lose. paper beats rock");
         } else if ((playerSelection == "paper") && (compMove =="rock")) {
-              results = ("you win. paper beats rock");
+            playerScore++;
+            results = ("you win. paper beats rock");
         } else if ((playerSelection == "scissors") && (compMove =="paper")) {
-              results = ("you win. scissors beats paper");
+            playerScore++;
+            results = ("you win. scissors beats paper");
         } else if ((playerSelection == "paper") && (compMove =="scissors")) {
-              results = ("you lose. scissors beats paper");
+            compScore++;
+            results = ("you lose. scissors beats paper");
         } else if ((playerSelection == "rock") && (compMove =="scissors")) {
-              results = ("you win. rock beats scissors");
+            playerScore++;
+            results = ("you win. rock beats scissors");
         } else if ((playerSelection == "scissors") && (compMove =="rock")) {
-                  results = ("you lose. rock beats scissors");
+            compScore++;
+            results = ("you lose. rock beats scissors");
         } else {
             results = "typo?"
         }
           return results;
   }
+
+function game() {
+      singleRound()
+      //play singleRound 5 times while tallying score from player and computer
+      // playerscore ++  and compscore++ in computerPlay else if 
+      //play loop until one score = 5 and then declare winner and exit loop
+
+}
   
  
