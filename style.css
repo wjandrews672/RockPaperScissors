@@ -1,0 +1,37 @@
+body {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/40a9b983-2de0-4e9f-9c16-f00d0e5dcea6/ddc9jk3-e08b07a3-1c76-4c09-8dfc-e29b6f930448.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNDBhOWI5ODMtMmRlMC00ZTlmLTljMTYtZjAwZDBlNWRjZWE2XC9kZGM5amszLWUwOGIwN2EzLTFjNzYtNGMwOS04ZGZjLWUyOWI2ZjkzMDQ0OC5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.9Xem79WCGpm_gYAWt-X453nevWSCHSJGcimfGvvY0MA);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    width: auto;
+    font-family: 'Cinzel', serif;
+    flex-direction: column;
+    color: red;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h1 {
+    
+    font-size: 3rem;
+}
+
+p {
+ font-size: 2rem;
+ font-weight: 200;
+}
+
+#buttons {
+    height: 50%;
+    width: 100vw;
+    
+}
+
+button {
+    font-size: 2rem;
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px red;
+    
+    background: grey;
+    font-family: 'Cinzel', serif;
+}
