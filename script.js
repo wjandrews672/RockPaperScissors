@@ -2,6 +2,9 @@
 const buttons = document.querySelectorAll('button'); 
 const p = document.querySelector('p');
 const h2 = document.querySelector('h2');
+const p2 = document.querySelector('#p2');
+const btn = document.createElement("BUTTON");
+btn.textContent = 'Try Again?'
 
 let answer;
 let results;
@@ -79,6 +82,11 @@ function declareWinner() {
   } else {
         p.textContent = "It seems you have lost control of your limbs. Your vision is fading and the ominous chanting is becoming deafening. I'm afraid this is the end, my friend.";
   }
+  p2.appendChild(btn);
+}
+
+function playAgain() {
+    location.reload();
 }
 
 buttons.forEach((button) => {
@@ -93,6 +101,7 @@ buttons.forEach((button) => {
     });
 });
 
+btn.addEventListener('click', playAgain);
 
 
 //create a declare winner function that outputs game resutls into p on score limit
@@ -101,7 +110,3 @@ buttons.forEach((button) => {
       //play singleRound 5 times while tallying score from player and computer
       // playerscore ++  and compscore++ in computerPlay else if 
       //play loop until one score = 5 and then declare winner and exit loop
-
-
-  
- 
