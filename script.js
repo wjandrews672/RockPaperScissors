@@ -63,7 +63,7 @@ function singleRound() {// return String to declare winner
         } else {
             results = "typo?"
         }
-        h2.textContent=`Player Health: ${playerScore}  Witch Health: ${compScore}`;
+        h2.textContent=`Player Health: ${playerScore} --- Witch Health: ${compScore}`;
           return results;
 }
 
@@ -103,10 +103,6 @@ buttons.forEach((button) => {
 
 btn.addEventListener('click', playAgain);
 
-
-//create a declare winner function that outputs game resutls into p on score limit
-
-    //replace text entry with button press for playerSelection
-      //play singleRound 5 times while tallying score from player and computer
-      // playerscore ++  and compscore++ in computerPlay else if 
-      //play loop until one score = 5 and then declare winner and exit loop
+//add semi-opaque background boxes around text.
+//finish css and flex formatting
+//make declareWinner run on health 0 instead of next click.
