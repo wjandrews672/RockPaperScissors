@@ -43,31 +43,31 @@ function singleRound() {// return String to declare winner
       if ((playerSelection == "stone") && (compMove == "stone") || 
         (playerSelection =="sceptre") && (compMove =="sceptre") || 
         (playerSelection =="tome") && (compMove =="tome")) {
-            results = ("Attack blocked");
+            p.textContent = ("Attack blocked");
         } else if ((playerSelection == "stone") && (compMove =="tome")) {
             playerScore--;
-            results = ("you are hit. tome banishes stone");
+            p.textContent = ("you are hit. tome banishes stone");
         } else if ((playerSelection == "tome") && (compMove =="stone")) {
             compScore--;
-            results = ("your incantation works. tome banishes stone");
+            p.textContent = ("your incantation works. tome banishes stone");
         } else if ((playerSelection == "sceptre") && (compMove =="tome")) {
             compScore--;
-            results = ("your spell lands. sceptre ingites tome");
+            p.textContentesults = ("your spell lands. sceptre ingites tome");
         } else if ((playerSelection == "tome") && (compMove =="sceptre")) {
             playerScore--;
-            results = ("you are burned. sceptre ignites tome");
+            p.textContent = ("you are burned. sceptre ignites tome");
         } else if ((playerSelection == "stone") && (compMove =="sceptre")) {
             compScore--;
-            results = ("you hit the target. stone shatters sceptre");
+            p.textContent = ("you hit the target. stone shatters sceptre");
         } else if ((playerSelection == "sceptre") && (compMove =="stone")) {
             playerScore--;
-            results = ("you are dazed. stone shatters sceptre");
+            p.textContent = ("you are dazed. stone shatters sceptre");
         } else {
-            results = "typo?"
+            p.textContent = "typo?"
         }
+        checkScore();
         playerHealth.textContent=`Player Health: ${playerScore}`; 
         witchHealth. textContent= `Witch Health: ${compScore}`;
-          return results;
 }
 
 // function game() {
@@ -79,28 +79,32 @@ function singleRound() {// return String to declare winner
 //       return (`${gameOver}, player score is ${playerScore} and computer score is ${compScore}`);
 // }
 
+function checkScore() {
+    if (compScore == 0 || playerScore == 0) {
+        declareWinner()
+    }
+}
+
 function declareWinner() {
     if (compScore == 0) {
         p.textContent = "You slayed the witch and maintained your sanity. I suggest you flee before her coven investigates!";
-  } else {
+  } else if (playerScore == 0) {
         p.textContent = "It seems you have lost control of your limbs. Your vision is fading and the ominous chanting is becoming deafening. I'm afraid this is the end, my friend.";
   }
   p2.appendChild(btn);
 }
 
+
 function playAgain() {
     location.reload();
 }
+//wrap in while loop to constantly check score
+
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playerSelection = button.id;
-        if (playerScore == 0 || compScore == 0) {
-            declareWinner();
-        } else {
-            singleRound();
-            p.textContent=results; 
-        }
+            singleRound(); 
     });
 });
 
