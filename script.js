@@ -4,6 +4,8 @@ const p = document.querySelector('p');
 const h2 = document.querySelector('h2');
 const p2 = document.querySelector('#p2');
 const btn = document.createElement("BUTTON");
+const playerHealth = document.querySelector('#player-health');
+const witchHealth = document.querySelector('#comp-health');
 btn.textContent = 'Try Again?'
 
 let answer;
@@ -63,7 +65,8 @@ function singleRound() {// return String to declare winner
         } else {
             results = "typo?"
         }
-        h2.textContent=`Player Health: ${playerScore} --- Witch Health: ${compScore}`;
+        playerHealth.textContent=`Player Health: ${playerScore}`; 
+        witchHealth. textContent= `Witch Health: ${compScore}`;
           return results;
 }
 
