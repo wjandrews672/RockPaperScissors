@@ -15,7 +15,6 @@ let compScore = 5;
 let gameOver;
 let playerSelection;
 
-
 function computerPlay () {
       // randomly return rock, paper, or scissors;
       let x = Math.floor(Math.random() * 3)
@@ -32,8 +31,6 @@ function computerPlay () {
           }
               return answer;
   }
- 
-
  
 function singleRound() {// return String to declare winner
      //makes user input case insensitive
@@ -70,15 +67,6 @@ function singleRound() {// return String to declare winner
         witchHealth. textContent= `Witch Health: ${compScore}`;
 }
 
-// function game() {
-//             if (playerScore == 5) {
-//                   gameOver = "congratulations, You win!!";
-//             } else {
-//                   gameOver = "Too bad. You lose";
-//             }
-//       return (`${gameOver}, player score is ${playerScore} and computer score is ${compScore}`);
-// }
-
 function checkScore() {
     if (compScore == 0 || playerScore == 0) {
         declareWinner()
@@ -94,12 +82,9 @@ function declareWinner() {
   p2.appendChild(btn);
 }
 
-
 function playAgain() {
     location.reload();
 }
-//wrap in while loop to constantly check score
-
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -109,7 +94,3 @@ buttons.forEach((button) => {
 });
 
 btn.addEventListener('click', playAgain);
-
-//add semi-opaque background boxes around text.
-//finish css and flex formatting
-//make declareWinner run on health 0 instead of next click.
